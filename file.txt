@@ -1,0 +1,148 @@
+converter 12 + input
+
+use of am and pm if pm then 12+input
+
+Timezone Converter:
+
+Create a NodeJS program/Script which accept the following inputs, and convert the `current time` to the given Timezone.
+
+Input:
+CURRENT_TIME          : Current Time / Dynamic input
+CURRENT_TIMEZONE      : <Timezone of the CURRENT_TIME>
+CONVERT_TO_TIMEZONE   : <Timezone which wanted to convert to>
+
+Sample Input:
+
+CURRENT_TIME        = '12:00 AM'
+CURRENT_TIMEZONE    = 'IST
+CONVERT_TO_TIMEZONE = 'PT'
+
+Output:
+CONVERTED_TIME      = '10:30 AM'
+
+Addition (optional):
+You can prepare a script which can dynamically accept the Inputs (from CLI) and provide the proper results.
+
+Reference:
+https://savvytime.com/converter/ist-to-ptTimezone Converter:
+
+function calcTime(city, offset) {
+
+    // create Date object for current location
+    d = new Date("2023-3-18");
+    d.setHours(11)
+    d.setMinutes(16)
+    console.log(d.toLocaleString());
+    // convert to msec
+    // add local time zone offset
+    // get UTC time in msec
+    utc = d.getTime() + (0 * 60000);
+    
+    // create new Date object for different city
+    // using supplied offset
+    nd = new Date(utc + (3600000*offset));
+    
+    // return time as a string
+    return "The local time in " + city + "is" + nd.toLocaleString()
+    
+    }
+ console.log(calcTime("Singapore", "+8"));
+
+
+// singapore to ist
+ function calcTime(city, offset) {
+    // create Date object for current location
+    d = new Date("2023-3-18");
+    d.setHours(11)
+    d.setMinutes(21)
+    console.log(d.toLocaleString());
+    // convert to msec
+    // add local time zone offset
+    // get UTC time in msec
+    utc = d.getTime() + (0 * 60000);
+    // create new Date object for different city
+    // using supplied offset
+    nd = new Date(utc + (3600000*offset));
+    // return time as a string
+    return "The local time in " + city + "is" + nd.toLocaleString()
+    }
+ console.log(calcTime("ist", "+5.5"));
+
+
+//singapore to london
+function calcTime(city, offset) {
+    // create Date object for current location
+    d = new Date("2023-3-18");
+    d.setHours(19)
+    d.setMinutes(22)
+    console.log(d.toLocaleString());
+    // convert to msec
+    // add local time zone offset
+    // get UTC time in msec
+    utc = d.getTime() + (-480 * 60000);
+    // create new Date object for different city
+    // using supplied offset
+    nd = new Date(utc + (3600000*offset));
+    // return time as a string
+    return "The local time in " + city + "is" + nd.toLocaleString()
+    }
+ console.log(calcTime("london", "+0"));
+
+
+//london to singapore
+function calcTime(city, offset) {
+    // create Date object for current location
+    d = new Date("2023-3-18");
+    d.setHours(11)
+    d.setMinutes(23)
+    console.log(d.toLocaleString());
+    // convert to msec
+    // add local time zone offset
+    // get UTC time in msec
+    utc = d.getTime() + (0 * 60000);
+    // create new Date object for different city
+    // using supplied offset
+    nd = new Date(utc + (3600000*offset));
+    // return time as a string
+    return "The local time in " + city + "is" + nd.toLocaleString()
+    }
+ console.log(calcTime("Singapore", "+8"));
+
+
+ ps to ist
+function calcTime(city, offset) {
+    // create Date object for current location
+    d = new Date("2023-3-18");
+    d.setHours(5)
+    d.setMinutes(30)
+    console.log(d.toLocaleString());
+    // convert to msec
+    // add local time zone offset
+    // get UTC time in msec
+    utc = d.getTime() + (420 * 60000);
+    // create new Date object for different city
+    // using supplied offset
+    nd = new Date(utc + (3600000*offset));
+    // return time as a string
+    return "The local time in " + city + " is" + nd.toLocaleString()
+    }
+ console.log(calcTime("india ", "+5.5"));
+
+///ist to pt
+ function calcTime(city, offset) {
+    // create Date object for current location
+    d = new Date("2023-3-18");
+    d.setHours(18)
+    d.setMinutes(05)
+    console.log(d.toLocaleString());
+    // convert to msec
+    // add local time zone offset
+    // get UTC time in msec
+    utc = d.getTime() + (-330 * 60000);
+    // create new Date object for different city
+    // using supplied offset
+    nd = new Date(utc + (3600000*offset));
+    // return time as a string
+    return "The local time in " + city + " is" + nd.toLocaleString()
+    }
+ console.log(calcTime("india ", "-7"));
