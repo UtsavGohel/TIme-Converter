@@ -6,7 +6,6 @@ var t3 = process.argv[4]
 var t4 = process.argv[5]
 
 let IST = [5.5,-330] 
-// let SINGPORE = 
 let PT = [-7,420]
 let SGT = [8.0,-480]
 let LT = [0,0]
@@ -54,9 +53,15 @@ console.log(t1,t2,t3,t4);
 t1.split(0,1)
 
 var chars = t1.split(''); 
-
-let a =chars[0]+chars[1]
+let checkAmPm = chars[5]+chars[6]
+console.log(checkAmPm);
+var a =chars[0]+chars[1]
 let b = chars[3]+chars[4]
+console.log( a ," beforr a ");
+if(checkAmPm == "PM"){
+ a = 12+Number(a);
+}
+// console.log();
 // console.log(typeof Number(a),typeof Number(b));
 function calcTime(city, offset) {
     d = new Date(t4);
